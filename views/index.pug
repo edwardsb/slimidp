@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(method='POST' action='/sso')
+    div.form-group
+      label(for='display_name') Name:
+      input#display_name.form-control(type='text', placeholder='Tom Cruise' name='display_name' value="Ben Edwards")
+    div.form-group
+      label(for='email') Email:
+      input#email.form-control(type='email', placeholder='name@email.com' name='email' value="bedwards@malwarebytes.com")
+    div.form-group
+      label(for='master_id') Master ID:
+      input#master_id.form-control(type='text', placeholder='00000000-0000-0000-0000-000000000000' name='master_id' value="60d191ca-9fe8-4202-a24f-12341d7e9540")
+    div.form-group
+      label(for='site_id') Site ID:
+      input#site_id.form-control(type='text' name='site_id' value="7bf41876-e62b-4a1a-b092-b82a4a9f2a65")
+    div.form-group
+      label(for='role') Role:
+      input#role.form-control(type='text' name='role' value="SuperAdmin")
+    button.btn.btn-primary(type='submit') Sign Into Site Account
