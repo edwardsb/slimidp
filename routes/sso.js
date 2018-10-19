@@ -28,7 +28,7 @@ router.post('/', function (req, res) {
 		cert:       fs.readFileSync(path.join(__dirname, '../signing-cert-pub.pem')), // we will need to share this certificate
 		key:        fs.readFileSync(path.join(__dirname, '../signing-cert-pvt.key')),
 		getPostURL: function (wtrealm, wreply, req, callback) {
-			return callback( null, )
+			return callback( null, assertionConsumerServiceURL)
 		},
 		profileMapper: SimpleProfileMapper
 	})(req, res)
